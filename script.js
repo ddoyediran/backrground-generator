@@ -7,31 +7,8 @@ var body = document.getElementById("gradient");
 var colorRan = document.querySelector(".colorRan");
 
 
-// function btnColor() {
-// var r = Math.floor(Math.random()*256);          // Random between 0-255
-// var g = Math.floor(Math.random()*256);          // Random between 0-255
-// var b = Math.floor(Math.random()*256);          // Random between 0-255
-// var rgb = 'rgb(' + r + ',' + g + ',' + b + ')';
-// return rgb;
-// }
 
-// var dami = btnColor();
-
-// function genColor() {
-// 	body.style.background = "linear-gradient(to right, " 
-// 	+ dami.value 
-// 	+ ", " 
-// 	+ dami.value 
-// 	+ ")";
-// }
-
-
-
-// color32.addEventListener("generate", genColor);
-// color3.addEventListener("generate", genColor);
-
-
-// this for the input
+// this is for the input
 // function addColor() {
 // 	body.style.background = 
 // 	"linear-gradient(to right, " 
@@ -48,26 +25,30 @@ var colorRan = document.querySelector(".colorRan");
 // color2.addEventListener("input", addColor);
 
 
+//Sample here
 // https://codepen.io/chrisgresh/pen/aNjovb
 
 
 
-var color12 = function()
-{return'#'+(1e8^Math.random()*(1<<24)).toString(16).slice(1)}
+function color12()
+{
+	return'#'+(1e8^Math.random()*(1<<24)).toString(16).slice(1)
+}
 
-var color22 = function() {
+function color22() {
 	return'#'+(1e8^Math.random()*(1<<14)).toString(16).slice(1)
 }
 
-//function genColor() 
 
+//thus function is to add the color to the background
 function genColor() {
 	body.style.background = 
 	"linear-gradient(to right, " 
-	+ color12
+	+ color12()
 	+ ", " 
-	+ color22
+	+ color22()
 	+ ")";
 }
 
+//callback function
 colorRan.addEventListener("click", genColor); 
