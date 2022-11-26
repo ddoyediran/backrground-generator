@@ -1,1 +1,1 @@
-# backrground generator app
+# Backrground generator app
